@@ -1,3 +1,4 @@
--if YourMomIsSoFat.if_input?(session[:message])
-  =YourMomIsSoFat.return_response(session[:message])
+-if Joke.find_by_lead session[:message]
+  =Joke.find_by_lead(session[:message]).punchline
+  
   

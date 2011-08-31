@@ -1,7 +1,11 @@
 require 'rubygems'
 require 'sinatra'
+require 'sinatra/activerecord'
 require 'your_mom_is_so'
 enable :sessions
+
+class Joke < ActiveRecord::Base
+end
 
 before do 
 session[:message] = "" if session[:message].nil?
@@ -19,7 +23,7 @@ helpers do
   end
   
   def set_message
-    session[:message] = params[:message]    
+    session[:message] = params[:message]
   end
   
 end
