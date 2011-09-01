@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'your_mom_is_so'
+require 'haml'
 enable :sessions
 
 class Joke < ActiveRecord::Base
